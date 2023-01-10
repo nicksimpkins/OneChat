@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+}
+.header {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+.main {
+    width: 800px;
+    height: 475px;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 20%;
+    right: 25%;
+}
+.paramtxt {
+    color: #38b5cf;
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    font-weight: bold;
+}
+.paraminput {
+    width: 55px;
+    height: 22px;
+    font-size: 12px;
+    border-radius: 7px;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+.paramdrop {
+    position: relative;
+}

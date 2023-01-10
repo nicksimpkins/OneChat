@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up for OneChat</title>
+
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script type="text/javascript" src="/scripts/validation.js" defer></script>
+
+</head>
+<body>
+
+    <form action="process.php" method="post" id="signup" novalidate>
+  
+        <div id="form_page">
+  
+            <div class="signupbox">
+                <div id="head">
+                    <p class="signintxt">Sign Up</p>
+                </div>
+                <br />
+                <div id="input_name" class="input">
+                    <p class="bottomsignintxt">Name:</p>
+                    <input id="name" type="text" Placeholder="What People Will Call You" name="name" maxlength="32" required>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                         // do not allow users to enter spaces:
+                        $("#username").on({
+                            keydown: function(event) {
+                                if (event.which === 32)
+                                    return false;
+                            },
+                        // if a space copied and pasted in the input field, replace it (remove it):
+                            change: function() {
+                                this.value = this.value.replace(/\s/g, "");
+                            }
+                        });
+                    });
+                </script>
+                <div id="input_username" class="input">
+                    <p class="bottomsignintxt">Username:</p>
+                    <input id="username" type="text" Placeholder="Username" name="username" maxlength="32" required>
+                </div>
+                <div id="input_email" class="input">
+                    <p class="bottomsignintxt">Email:</p>
+                    <input id="email" type="text" Placeholder="Email" name="email" maxlength="255" required>
+                </div>
+                <div id="input_password" class="input">
+                    <p class="bottomsignintxt">Password:</p>
+                    <input id="password" type="password" Placeholder="Password" name="password" maxlength="255" required>
+                </div>
+                <div id="password_match" class="input">
+                    <p class="bottomsignintxt">Repeat Password:</p>
+                    <input id="password_confrimation" type="password" Placeholder="Password" name="password_confrimation" maxlength="255" required>
+                </div>
+                <div id="input_age" class="input">
+                    <p class="bottomsignintxt">Date of Birth:</p>
+                    <input type="date" name="age" id="age" required>
+                </div>
+                <div id="input_location" class="input">
+                    <p class="bottomsignintxt">Enter Closest Location:</p>
+                    <select name="location" id="location" required>
+                        <option value="NULL">Select Location</option>
+                        <option value="Birmingham, AL">Birmingham, AL</option>
+                        <option value="Montgomery, AL">Montgomery, AL</option>
+                        <option value="Anchorage, AK">Anchorage, AK</option>
+                        <option value="Pheonix, AZ">Pheonix, AZ</option>
+                        <option value="Tucson, AZ">Tucson, AZ</option>
+                        <option value="Little Rock, AK">Little Rock, AK</option>
+                        <option value="Los Angeles, CA">Los Angeles, CA</option>
+                        <option value="San Diego, CA">San Diego, CA</option>
+                        <option value="San Fransisco, CA">San Fransico, CA</option>
+                        <option value="Sacremento, CA">Sacremento, CA</option>
+                        <option value="Boulder, CO">Boulder, CO</option>
+                        <option value="Denver, CO">Denver, CO</option>
+                        <option value="Hartford, CT">Hartford, CT</option>
+                        <option value="Wilmington, DE">Wilmington, DE</option>
+                        <option value="city">city</option>
+                      </select>
+                </div>
+                <div id="input_gender" class="input">
+                    <p class="bottomsignintxt">Gender:</p>
+                    <select name="gender" id="gender" required>
+                        <option value="NULL">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
+                </div>
+                <p class="bottomsignintxt">Intrests:</p>
+                <div id="input_intrestone" class="input">
+                    <input id="intrest" type="text" Placeholder="Intrest One" name="intrestone" required>
+                </div>
+                <div id="input_intresttwo" class="input">
+                    <input id="intrest" type="text" Placeholder="Intrest Two" name="intresttwo" required>
+                </div>
+                <div id="input_intrestthree" class="input">
+                    <input id="intrest" type="text" Placeholder="Intrest Three" name="intrestthree" required>
+                </div>
+                <div id="input_intrestfour" class="input">
+                    <input id="intrest" type="text" Placeholder="Intrest Four" name="intrestfour" required>
+                </div>
+                <p class="bottomsignintxt">Favorite Places:</p>
+                <div id="input_fpone" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Place One" name="fpone" required>
+                </div>
+                <div id="input_fptwo" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Place Two" name="fptwo" required>
+                </div>
+                <div id="input_fpthree" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Place Three" name="fpthree" required>
+                </div>
+                <div id="input_fpfour" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Place Four" name="fpfour" required>
+                </div>
+                <p class="bottomsignintxt">Favorite Foods:</p>
+                <div id="input_ffone" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Food One" name="ffone" required>
+                </div>
+                <div id="input_fftwo" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Food Two" name="fftwo" required>
+                </div>
+                <div id="input_ffthree" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Food Three" name="ffthree" required>
+                </div>
+                <div id="input_fffour" class="input">
+                    <input id="intrest" type="text" Placeholder="Favorite Food Four" name="fffour" required>
+                </div>
+                <br>
+
+                <div class="id input">
+                    <input id="submit" type="submit" name="submit" value="Sign Up" onclick="submitform()">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+</body>
+</html>
